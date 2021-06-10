@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(250, 248, 239);
+}
+
+.header {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-radius: 10px;
+  top: 20px;
+  position: relative;
+}
+
+.title-cell {
+  color: rgb(143, 122, 102);
+  font-weight: bolder;
+}
+
+.right-col {
+  width: 210px;
+}
+
+.right-cell {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.score {
+  text-align: center;
+  text-transform: uppercase;
+  height: 50px;
+  width: 60px;
+  padding: 5px 20px;
+  background-color: rgb(187, 173, 159);
+  border-radius: 5px;
+}
+
+.score-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.score span {
+  font-weight: bolder;
+}
+
+.new-game {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(143, 122, 102);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.grid-container {
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+  margin: 0 auto;
+  top: 30px;
+  background-color: rgb(184, 167, 157);
+  border-radius: 10px;
+  position: relative;
+}
+
+.grid-cell {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(208, 194, 185);
+  border-radius: 5px;
+  position: absolute;
+}
+
+.number-cell {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+}
