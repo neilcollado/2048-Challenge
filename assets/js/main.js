@@ -142,3 +142,50 @@ $(document).keydown(function(event) {
       break
   }
 })
+
+document.addEventListener('touchend',function(event){
+
+  event.preventDefault();
+  var touch = event.touches[0];
+  alert(touch.pageX + " - " + touch.pageY);
+  endx=event.changedTouches[0].pageX;
+  endy=event.changedTouches[0].pageY;
+
+  var deltax=endx-startx;
+  var deltay=endy-starty;
+
+  if(Math.abs(deltax)<0.3*documentWidth&&Math.abs(deltay)<0.3*documentWidth){
+      return ;
+  }
+  if(Math.abs(deltax)>Math.abs(deltay)){
+      if(deltax>0){
+          if(moveRight()){
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
+          }
+
+      }else{
+          if(moveLeft()){
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
+          }
+
+      }
+  }else{
+      if(deltay>0){
+          if(moveDown()){
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
+          }
+
+      }else{
+
+          if(moveUp()){
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
+          }
+
+      }
+
+  }
+});
