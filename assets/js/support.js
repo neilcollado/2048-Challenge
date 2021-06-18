@@ -257,29 +257,29 @@ document.addEventListener('touchend',function(event){
   if(Math.abs(deltax)>Math.abs(deltay)){
       if(deltax>0){
           if(moveRight()){
-              setTimeout("generateOneNumber()",210);
-              setTimeout("isgameover()",300);
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
           }
 
       }else{
           if(moveLeft()){
-              setTimeout("generateOneNumber()",210);
-              setTimeout("isgameover()",300);
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
           }
 
       }
   }else{
       if(deltay>0){
           if(moveDown()){
-              setTimeout("generateOneNumber()",210);
-              setTimeout("isgameover()",300);
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
           }
 
       }else{
 
           if(moveUp()){
-              setTimeout("generateOneNumber()",210);
-              setTimeout("isgameover()",300);
+              setTimeout("createRandomNumber()",210);
+              setTimeout("isGameOver()",300);
           }
 
       }
