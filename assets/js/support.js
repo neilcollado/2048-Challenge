@@ -241,3 +241,48 @@ function moveDown() {
     return false
   }
 }
+
+document.addEventListener('touchend',function(event){
+
+  event.preventDefault();
+  endx=event.changedTouches[0].pageX;
+  endy=event.changedTouches[0].pageY;
+
+  var deltax=endx-startx;
+  var deltay=endy-starty;
+
+  if(Math.abs(deltax)<0.3*documentWidth&&Math.abs(deltay)<0.3*documentWidth){
+      return ;
+  }
+  if(Math.abs(deltax)>Math.abs(deltay)){
+      if(deltax>0){
+          if(moveRight()){
+              setTimeout("generateOneNumber()",210);
+              setTimeout("isgameover()",300);
+          }
+
+      }else{
+          if(moveLeft()){
+              setTimeout("generateOneNumber()",210);
+              setTimeout("isgameover()",300);
+          }
+
+      }
+  }else{
+      if(deltay>0){
+          if(moveDown()){
+              setTimeout("generateOneNumber()",210);
+              setTimeout("isgameover()",300);
+          }
+
+      }else{
+
+          if(moveUp()){
+              setTimeout("generateOneNumber()",210);
+              setTimeout("isgameover()",300);
+          }
+
+      }
+
+  }
+});
