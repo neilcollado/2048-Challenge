@@ -245,6 +245,8 @@ function moveDown() {
 document.addEventListener('touchend',function(event){
 
   event.preventDefault();
+  var touch = event.touches[0];
+  alert(touch.pageX + " - " + touch.pageY);
   endx=event.changedTouches[0].pageX;
   endy=event.changedTouches[0].pageY;
 
